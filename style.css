@@ -1,5 +1,5 @@
 .principal{
-    background: linear-gradient(90deg, rgb(67, 67, 245) , rgb(138, 0, 138));
+    background: linear-gradient(90deg, rgb(67, 67, 245) , rgb(75, 12, 75));
     font-family: arial;
 }
 .titulo-principal{
@@ -9,4 +9,5 @@
     font-weight: bold;
     text-shadow: 2px 2px 4px white;
     text-transform: uppercase;
+    padding: 20px 0 50px 0;
 }
