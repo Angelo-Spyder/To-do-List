@@ -38,21 +38,22 @@
 .conteudo{
     margin: 20px auto;
     background: white;
-    width: 300px;
-    font-size: 20px;
-    height: 30px;
+    width: 400px;
+    font-size: 18px;
+    height: 29px;
 }
 .texto-atividade{
     display:inline-block;
     padding: 5px;
-    width: 240px;
+    width: 86%;
 }
 .icone{
+    float: right;
     display: inline-block;
     width: 40px;
-    padding: 5px 0;
+    padding: 4px 0;
     text-align: center;
-    background: rgb(75, 12, 75);
+    background: rgb(151, 34, 151);
 }
 .icone img{
     width: 1em;
