@@ -38,15 +38,10 @@ botaoAdiciona.addEventListener("click", (event) => {
 IconeLixeira.forEach(
     () => {
         conteudoAtividades.addEventListener("click", (event) => {
-            event.target.parentNode.parentNode.remove()
+            if(event.target.tagName == "IMG"){
+                event.target.parentNode.parentNode.remove()
+            }
+             
         })
     }
 )
-
-/*for(var i = 0; i < IconeLixeira.length; i++){
-    IconeLixeira[i].addEventListener("click", 
-        (event) => {
-            event.target.parentNode.parentNode.remove()
-        }
-    )
-}*/
