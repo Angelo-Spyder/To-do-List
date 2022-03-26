@@ -3,23 +3,35 @@ var conteudoAtividades = document.querySelector(".atividades");
 var botaoAdiciona = document.querySelector("#botaoAdiciona");
 var textoInput = document.querySelector("#texto");
 var IconeLixeira = document.querySelectorAll(".icone");
+var erro = document.querySelector(".erro");
 
-botaoAdiciona.addEventListener("click", () => {
-    var divPrincipal = document.createElement("div");
-    divPrincipal.classList.add("conteudo");
+botaoAdiciona.addEventListener("click", (event) => {
     
-    var spanAtividade = document.createElement("span");
-    spanAtividade.textContent = textoInput.value;
-    spanAtividade.classList.add("texto-atividade");
+    if(textoInput.value.length == 0){  
+        erro.textContent = "Insira um texto"
 
-    var spanIcone = document.createElement("span")
-    spanIcone.classList.add("icone");
-    spanIcone.innerHTML = `<img  src="lixeira-icon.png" alt="Lixeira de reciclagem">`;
+        return
+    }else{
+        erro.innerHTML = ""
+
+        var divPrincipal = document.createElement("div");
+        divPrincipal.classList.add("conteudo");
+        
+        var spanAtividade = document.createElement("span");
+        spanAtividade.textContent = textoInput.value;
+        spanAtividade.classList.add("texto-atividade");
     
+        var spanIcone = document.createElement("span")
+        spanIcone.classList.add("icone");
+        spanIcone.innerHTML = `<img  src="lixeira-icon.png" alt="Lixeira de reciclagem">`;
+        
+    
+        divPrincipal.appendChild(spanAtividade);
+        divPrincipal.appendChild(spanIcone);
+        conteudoAtividades.appendChild(divPrincipal);
 
-    divPrincipal.appendChild(spanAtividade);
-    divPrincipal.appendChild(spanIcone);
-    conteudoAtividades.appendChild(divPrincipal);
+        textoInput.value = ""
+    }
 
 });
 
