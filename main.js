@@ -38,9 +38,15 @@ botaoAdiciona.addEventListener("click", (event) => {
 IconeLixeira.forEach(
     () => {
         conteudoAtividades.addEventListener("click", (event) => {
-            if(event.target.tagName == "IMG"){
-                event.target.parentNode.parentNode.remove()
-            }
+            event.target.parentNode.parentNode.classList.add("desaparecer")
+            setTimeout(
+                ()=>{
+                    
+                    if(event.target.tagName == "IMG"){
+                        event.target.parentNode.parentNode.remove()
+                    }
+            },500)
+            
              
         })
     }

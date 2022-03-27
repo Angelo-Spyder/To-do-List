@@ -56,7 +56,6 @@
 }
 .icone{
     float: right;
-    display: inline-block;
     width: 40px;
     padding: 4px 0;
     text-align: center;
@@ -64,4 +63,9 @@
 }
 .icone img{
     width: 1em;
+}
+.desaparecer{
+    transition: 0.5s;
+    transform: rotate(360deg);
+    opacity: 0;
 }
